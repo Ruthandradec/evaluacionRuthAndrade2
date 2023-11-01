@@ -14,7 +14,16 @@ def es_movimiento_valido(posicion_inicio, posicion_final):
     else:
         return False
 
+# Ejemplo de uso
 if __name__ == "__main__":
+    # Ingresa la posición de partida y posición final del alfil en formato (fila, columna)
+    
+    inicio = input("Ingrese la posicion inicial: ")
+    final = input("Ingrese la posicion final: ")
+    posicion_inicio = convertir_coordenadas(inicio) #'A1')  # Coordenada inicial
+    posicion_final = convertir_coordenadas(final) #'H8')  # Coordenada final
 
-    
-    
+    if es_movimiento_valido(posicion_inicio, posicion_final):
+        print("El movimiento es válido para el alfil en el tablero de ajedrez.")
+    else:
+        print("El movimiento no es válido para el alfil en el tablero de ajedrez.")
